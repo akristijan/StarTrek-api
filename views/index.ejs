@@ -34,9 +34,12 @@
             <h1>Current Aliens</h1>
             <ul class="aliens">
                 <% for(let i = 0; i < info.length; i++) {%>
-                    <li class="alien">
-                        <span><%= info[i] %></span>
-                    </li>
+                    <a href="/aliens/<%= info[i]._id %>">
+                        <li class="alien">
+                            <span><%= info[i].name %> | <%= info[i].species %></span>
+                        </li>
+                    </a>
+                    
                 <% } %>
             </ul>
         </section>
