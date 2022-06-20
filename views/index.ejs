@@ -33,14 +33,14 @@
             <button type="submit" id="deleteBtn">Delete</button>
             <h1>Current Aliens</h1>
             <ul class="aliens">
-                <% for(let i = 0; i < info.length; i++) {%>
-                    <a href="/aliens/<%= info[i]._id %>">
+                <% info.forEach(item => {%>
+                    <a href="/aliens/<%= item._id %>">
                         <li class="alien">
-                            <span><%= info[i].name %> | <%= info[i].species %></span>
+                            <span><%= item.name %> | <%= item.species %></span>
                         </li>
                     </a>
                     
-                <% } %>
+                <% }) %>
             </ul>
         </section>
         
